@@ -1,0 +1,19 @@
+[project]
+name = "streamlit-full"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "arix",email = "arix0001@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit (>=1.65.0,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "streamlit_full", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
