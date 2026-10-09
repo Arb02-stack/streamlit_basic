@@ -1,0 +1,13 @@
+.stNumberInput p {
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #48374e;
+}
+
+.stMarkdown p {
+    padding-left: 15px;
+    border-radius: 5px;
+    background-color: #48374e;
+}
+
