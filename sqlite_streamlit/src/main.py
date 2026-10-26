@@ -1,8 +1,14 @@
 import streamlit as st
-from db.methods import insertData
+import pandas as pd
+from db.methods import insertData, listData
 
 
 st.title("Cadastro de Clientes")
+
+
+st.sidebar.subheader("Menu")
+st.sidebar.markdown("---")
+
 
 # Cria o formulário para agrupar e sincronizar os inputs
 with st.form("form_cadastro", clear_on_submit=True):
@@ -21,4 +27,15 @@ if send:
     else:
         insertData(name, email, tel)
         st.success("Cadastro efetuado com sucesso!")
+
+st.markdown("---")
+
+client_data = listData()
+
+if client_data:
+    data = [
+        {"nome": nome, "email": email, "telefone": telefone}
+        for _, nome, email, telefone in client_data
+    ]
+    st.dataframe(data, hide_index=True, use_container_width=True)
 

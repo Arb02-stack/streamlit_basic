@@ -1,3 +1,4 @@
+src/
 .venv/
 imgs/
 sqlite_streamlit/db/clientes.db
